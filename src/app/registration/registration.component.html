@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Hi Do You want to register for Plot Number : {{data.id}}?</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Customer Name </mat-label>
+    <input matInput [(ngModel)]="data.name" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Contact Number </mat-label>
+    <input matInput [(ngModel)]="data.contact" required>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" type="submit" cdkFocusInitial>Ok</button>
+</div>

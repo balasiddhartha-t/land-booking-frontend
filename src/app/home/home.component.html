@@ -1,0 +1,37 @@
+<mat-grid-list cols="8" rowHeight="635px" gutterSize="25px">
+    <mat-grid-tile colspan = "1" >
+       <div class="internalMatGrid">
+         <mat-grid-list cols="1" rowHeight="fit" style="height: 100%;" gutterSize="2px">
+           <mat-grid-tile (click)="onClickPlot(tile)" [ngClass]="{'brown': !tile.filled}" class="innerTile" *ngFor="let tile of firstSlot">{{tile.slot}}</mat-grid-tile>
+         </mat-grid-list>
+       </div>
+     </mat-grid-tile>
+     <mat-grid-tile colspan = "2">
+       <div class='internalMatGrid'>
+         <mat-grid-list cols="2" rowHeight="fit" style="height: 100%;" gutterSize="2px">
+          <mat-grid-tile class="innerTile" (click)="onClickPlot(tile)" [ngClass]="{'brown': !tile.filled}"  *ngFor="let tile of secondSlot">{{tile.slot}}</mat-grid-tile>
+         </mat-grid-list>
+       </div>
+     </mat-grid-tile>
+     <mat-grid-tile colspan = "2">
+       <div class='internalMatGrid'>
+          <mat-grid-list cols="2" rowHeight="fit" style="height: 100%;" gutterSize="2px">
+           <mat-grid-tile class="innerTile" (click)="onClickPlot(tile)" [ngClass]="{'brown': !tile.filled}" *ngFor="let tile of thirdSlot">{{tile.slot}}</mat-grid-tile>
+          </mat-grid-list>
+        </div>
+     </mat-grid-tile>
+     <mat-grid-tile colspan = "2">
+       <div class='internalMatGrid'>
+          <mat-grid-list cols="2" rowHeight="fit" style="height: 100%;" gutterSize="2px">
+           <mat-grid-tile class="innerTile" (click)="onClickPlot(tile)" [ngClass]="{'brown': !tile.filled}" *ngFor="let tile of fourthSlot">{{tile.slot}}</mat-grid-tile>
+          </mat-grid-list>
+       </div>
+     </mat-grid-tile>
+     <mat-grid-tile colspan = "1">
+       <div class='internalMatGrid'>
+          <mat-grid-list cols="1" rowHeight="fit" style="height: 100%;" gutterSize="2px">
+           <mat-grid-tile class="innerTile" (click)="onClickPlot(tile)" [ngClass]="{'brown': !tile.filled}" *ngFor="let tile of fifthSlot">{{tile.slot}}</mat-grid-tile>
+          </mat-grid-list>
+        </div>
+     </mat-grid-tile>
+  </mat-grid-list>
